@@ -1,5 +1,5 @@
         let currentSchedule = {};       
-        const allPeople = ['黃經洲', '洪柜峰', '林宏儒', '呂明峯', '周育稔', '許世勳', '羅應順' ];
+        const allPeople = ['黃經洲', '許世勳', '洪柜峰', '周育稔', '林宏儒', '羅應順', '呂明峯'];
 		
         let disabledPeople = new Set();
         let unavailableDays = {};
