@@ -378,6 +378,11 @@ function getYearHolidayMeta(y) {
     }
   });
 
+	  // 跨年補假：若隔年元旦（1月1日）適逢週六，則當年12月31日（週五）補假
+  if (new Date(y + 1, 0, 1).getDay() === 6 && daysMeta.length > 0) {
+    daysMeta[daysMeta.length - 1].isHoliday = true;
+    daysMeta[daysMeta.length - 1].isMakeup = true;
+  }
   yearHolidayMetaCache[y] = { daysMeta, metaMap };
   return yearHolidayMetaCache[y];
 }
